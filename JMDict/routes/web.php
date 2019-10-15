@@ -18,9 +18,15 @@ Route::get('/', function () {
 Route::resource('word','WordController');
 //Run once to load the words into the db.
 Route::get('/wordimport', function (){ return view('wordimport');});
+Route::get('/characterimport', function (){ return view('characterimport');});
 
 //Word search
 Route::get('/wordSearch','WordSearchController@search');
+
+//Character search
+Route::get('/skipSearch','CharacterSearchController@skipSearch');
+Route::get('/charMeaningSearch','CharacterSearchController@charMeaningSearch');
+
 
 //Route::get('/word','WordController@index');
 //Route::get('/word/{word}','WordController@show');

@@ -20,20 +20,42 @@
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane fade in active show" id="searchtab">
+                        <form method="GET" action="/skipSearch">
+                            <div class="container">
+                                <h3>Kanji Skip Search</h3>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="text" name="skipcode" placeholder="Skipcode"
+                                               value="{{ old('skipcode') }}" size="10">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <input type="text" name="radical" placeholder="Radical"
+                                               value="{{ old('radical') }}" size="2">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <button type="submit">></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                         <form method="GET" action="/wordSearch">
                             <div>
                                 <h3>Word Search</h3>
                                 <div>
-                                    <input type="text" name="wordSearchBegins" placeholder="Begins">
+                                    <input type="text" name="wordSearchBegins" placeholder="Begins"
+                                           value="{{ old('wordSearchBegins') }}">
                                 </div>
                                 <div>
-                                    <input type="text" name="wordSearchContains" placeholder="Contains">
+                                    <input type="text" name="wordSearchContains" placeholder="Contains"
+                                           value="{{ old('wordSearchContains') }}">
                                 </div>
                                 <div>
-                                    <input type="test" name="wordSearchEnds" placeholder="Ends">
+                                    <input type="text" name="wordSearchEnds" placeholder="Ends"
+                                           value="{{ old('wordSearchEnds') }}">
                                 </div>
                                 <div>
-                                    <input type="text" name="wordSearchMeans" placeholder="Means">
+                                    <input type="text" name="wordSearchMeans" placeholder="Means"
+                                           value="{{ old('wordSearchMeans') }}">
                                 </div>
                                 <button type="submit">Search</button>
                             </div>

@@ -1,7 +1,7 @@
 <?php
 
 use App\Word;
-include "/home/laravel/JMDict/Conversion.php";
+include "Conversion.php";
 
 $word = null;
 $currElement = "";

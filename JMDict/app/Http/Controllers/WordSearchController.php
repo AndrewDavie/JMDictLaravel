@@ -14,6 +14,7 @@ class WordSearchController extends Controller
 {
     public function search(Request $request)
     {
+        $request->flash();//save the request values into the session.
         $begin = $request->wordSearchBegins;
         $middle = $request->wordSearchContains;
         $end = $request->wordSearchEnds;
