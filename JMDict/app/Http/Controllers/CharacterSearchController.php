@@ -37,7 +37,7 @@ class CharacterSearchController extends Controller
             }
             if ($type == "radical") {
                 //FIXME : Why not just pass the unicode value from the frontend?
-                $querybuilder->where(classical, "=", mb_ord($input, "utf8")-12031);  //turn the radical input into the relevant classical number.
+                $querybuilder->where('classical', "=", $input);  //turn the radical input into the relevant classical number.
             }
         }
         return;
