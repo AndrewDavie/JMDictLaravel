@@ -26,11 +26,14 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <input type="text" name="skipcode" placeholder="Skipcode"
-                                               value="{{ old('skipcode') }}" size="10">
+                                               value="{{ old('skipcode') }}" size="5">
                                     </div>
                                     <div class="col-md-3">
-                                        <input type="text" name="radical" placeholder="Radical"
+                                        <select name="radical" placeholder="Radical"
                                                value="{{ old('radical') }}" size="2">
+
+                                        </select>
+                                        <!-- TODO : AJAX update the radical list as the skipcode is entered. -->
                                     </div>
                                     <div class="col-md-2">
                                         <button type="submit">></button>
