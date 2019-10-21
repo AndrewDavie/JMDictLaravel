@@ -102,7 +102,9 @@
             cache: false,
             success: function (data, textStatus, jqXHR) {
                 $.each(data,function(i,rad){
-                    $("#radical").append('<option value="'+rad.character+'">&#x'+rad.chinese+';</option>');
+                    $("#radical").append('<option value="'+rad.character+'"'+
+                        ((rad.character=='{{ old('radical')}}')?' selected':'')+  //remember old value and set it.
+                        '>&#x'+rad.chinese+';</option>');
                 });}
         });
     }
