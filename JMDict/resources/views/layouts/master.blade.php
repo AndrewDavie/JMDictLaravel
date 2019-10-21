@@ -42,6 +42,24 @@
                                 </div>
                             </div>
                         </form>
+                        <form method=""GET" action="kanjiSearch">
+                            <div class="container">
+                                <h3>Kanji Character Search</h3>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <input id="kanjiChar" type="text" name="kanjiChar" placeholder="Char" size="1" value="{{ old('kanjiChar') }}">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input id="kanjiMeaning" type="text" name="kanjiMeaning" placeholder="Meaning" size="5" value="{{ old('kanjiMeaning') }}">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <button type="submit">></button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </form>
                         <form method="GET" action="/wordSearch">
                             <div>
                                 <h3>Word Search</h3>

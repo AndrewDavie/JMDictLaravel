@@ -25,7 +25,7 @@ Route::get('/wordSearch','WordSearchController@search');
 
 //Character search
 Route::get('/skipSearch','CharacterSearchController@skipSearch');
-Route::get('/charMeaningSearch','CharacterSearchController@charMeaningSearch');
+Route::get('/kanjiSearch','CharacterSearchController@characterSearch');
 
 //Radical search
 Route::get('/radicalSearch','RadicalBySkipController@radicalSearch');

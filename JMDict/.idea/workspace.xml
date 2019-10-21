@@ -132,7 +132,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/characters" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -144,8 +144,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Rand\Documents\GitHub\JMDictLaravel\JMDict\resources\views\characters" />
       <recent name="C:\Users\Rand\Documents\GitHub\JMDictLaravel\JMDict\app\Http\Controllers" />
+      <recent name="C:\Users\Rand\Documents\GitHub\JMDictLaravel\JMDict\resources\views\characters" />
       <recent name="C:\Users\Rand\Documents\GitHub\JMDictLaravel\JMDict\resources\views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -185,7 +185,7 @@
       <workItem from="1570991116136" duration="7352000" />
       <workItem from="1571057178471" duration="198000" />
       <workItem from="1571057385035" duration="356000" />
-      <workItem from="1571058020738" duration="21620000" />
+      <workItem from="1571058020738" duration="23899000" />
     </task>
     <servers />
   </component>

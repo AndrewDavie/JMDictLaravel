@@ -39,6 +39,12 @@ class CharacterSearchController extends Controller
                 //FIXME : Why not just pass the unicode value from the frontend?
                 $querybuilder->where('classical', "=", $input);  //turn the radical input into the relevant classical number.
             }
+            if ($type == "character"){
+                $querybuilder->where("literal","=",$input);
+            }
+            if ($type == "meaning"){
+                $querybuilder->where("meaning","like","%".$input."%");
+            }
         }
         return;
     }
@@ -61,5 +67,22 @@ class CharacterSearchController extends Controller
             return "kana";
         }
         return "kanji";
+    }
+
+    /**
+     * ASD 211019 search for a kanji character by character or meaning.
+     * @param Request $request
+     */
+    public function characterSearch(Request $request){
+        $request->flash();//save the request values into the session.
+        $kanjiChar = $request->kanjiChar;
+        $kanjiMeaning = $request->kanjiMeaning;
+
+        $characters = DB::table('characters');
+        $this->buildQueryFragment($characters, $kanjiChar, "character");
+        $this->buildQueryFragment($characters, $kanjiMeaning, "meaning");
+
+        $results = $characters->get();
+        return view('characters.index', ['characters' => $results]);
     }
 }
