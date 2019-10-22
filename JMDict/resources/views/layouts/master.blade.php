@@ -82,6 +82,30 @@
                                 <button type="submit">Search</button>
                             </div>
                         </form>
+                        <form method="GET" action="/nameSearch">
+                            <div>
+                                <h3>Name Search</h3>
+                                <div>
+                                    <input type="text" name="nameSearchBegins" placeholder="Begins"
+                                           value="{{ old('nameSearchBegins') }}">
+                                </div>
+                                <div>
+                                    <input type="text" name="nameSearchContains" placeholder="Contains"
+                                           value="{{ old('nameSearchContains') }}">
+                                </div>
+                                <div>
+                                    <input type="text" name="nameSearchEnds" placeholder="Ends"
+                                           value="{{ old('nameSearchEnds') }}">
+                                </div>
+                                <div>
+                                    <select id="namesType" name="namesType" placeholder="Type"
+                                            value="{{ old('namesType') }}" >
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                                <button type="submit">Search</button>
+                            </div>
+                        </form>
                     </div>
 
                     <div class="tab-pane fade" id="browsetab">
@@ -107,9 +131,10 @@
         crossorigin="anonymous"></script>
 
 <script>
-    //ASD161019 Initial load of radicals for the skip search dropdown.
+
     jQuery(document).ready(function(){
-        updateRadicalDropdown();
+        updateRadicalDropdown(); //ASD161019 Initial load of radicals for the skip search dropdown.
+        updateNameTypeDropdown();  //ASD221019 Initial load of name types for dropdown.
     });
     function updateRadicalDropdown(){
         $.ajax({
@@ -123,6 +148,22 @@
                     $("#radical").append('<option value="'+rad.character+'"'+
                         ((rad.character=='{{ old('radical')}}')?' selected':'')+  //remember old value and set it.
                         '>&#x'+rad.chinese+';</option>');
+                });}
+        });
+    }
+    function updateNameTypeDropdown(){
+        $.ajax({
+            url:"/nameTypeList",
+            processData: false,
+            dataType:"json",
+            type: 'GET',
+            cache: false,
+            success: function (data, textStatus, jqXHR) {
+                $.each(data,function(i,type){
+                    console.log(type.name_type);
+                    $("#namesType").append('<option value="'+type.name_type+'"'+
+                        ((type=='{{ old('namesType')}}')?' selected':'')+  //remember old value and set it.
+                        '>'+type.name_type+';</option>');
                 });}
         });
     }
