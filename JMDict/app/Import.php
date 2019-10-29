@@ -1,4 +1,8 @@
 <?php
+/**
+ * ASD 151019 Import Japanese character dictionary from XML file.
+ * DON'T USE THIS ONE.  USE ImportJMDictXML as the character encoding isn't clean.
+ */
 
 use App\Word;
 include "Conversion.php";

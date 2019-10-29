@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b2ae344-716c-431e-95ed-943c742978aa" name="Default Changelist" comment="" />
+    <list default="true" id="5b2ae344-716c-431e-95ed-943c742978aa" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/WordSearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/WordSearchController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Import.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Import.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ImportCharacter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/ImportCharacter.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +192,8 @@
       <workItem from="1570991116136" duration="7352000" />
       <workItem from="1571057178471" duration="198000" />
       <workItem from="1571057385035" duration="356000" />
-      <workItem from="1571058020738" duration="31271000" />
+      <workItem from="1571058020738" duration="31930000" />
+      <workItem from="1572262523664" duration="1704000" />
     </task>
     <servers />
   </component>
@@ -199,7 +205,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
