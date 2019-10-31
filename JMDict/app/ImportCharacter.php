@@ -1,5 +1,8 @@
 <?php
-//ASD 151019 Import Japanese character dictionary from XML file.
+/*
+ * ASD 151019 Import Japanese character dictionary from XML file.
+ */
+
 use App\Character;
 
 include "Conversion.php";
@@ -23,7 +26,6 @@ function startElements($parser, $name, $attrs)
             $currElement = $attrs['QC_TYPE'];
             break;
         case "RAD_VALUE":
-
             $currElement = $attrs['RAD_TYPE'];
             break;
         case "MEANING":
@@ -40,12 +42,10 @@ function startElements($parser, $name, $attrs)
 
 function endElements($parser, $name)
 {
-//Got to end of entry, save the data to the db.
     global $char;
     if ($name == "CHARACTER") {
-
+        //Got to end of entry, save the data to the db.
         $char->save();
-
     }
 }
 
@@ -58,7 +58,7 @@ function characterData($parser, $data)
     switch ($currElement) {
         case "LITERAL":
             $char->literal = $data;
-            print_r($data);
+            print_r($data); //show that it's working.
             break;
         case "classical":
         case "nelson_c":
@@ -74,6 +74,7 @@ function characterData($parser, $data)
             $char[$currElement] = $data;
             break;
         case "MEANING":
+            //If it already has a meaning entry, append to it.
             $char->meaning = (isset($char->meaning) ? $char->meaning . '\n' : '') . $data;
             break;
     }

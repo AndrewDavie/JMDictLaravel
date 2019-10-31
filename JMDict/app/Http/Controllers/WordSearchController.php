@@ -1,7 +1,7 @@
 <?php
 /**
  *  ASD 300919 Controller to handle japanese word searches.
- * Returns all the words that match to the words.index
+ * Returns all the words that match to the words.index view
  */
 namespace App\Http\Controllers;
 
